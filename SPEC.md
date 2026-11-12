@@ -12,11 +12,27 @@ Think of it as a source map for a presentation: the deck is the compiled output,
 4. **Shareable by construction.** Everything in a brief is fit to send to everyone who receives the deck. It describes people by role, never by temperament.
 5. **The deck is the reference.** The brief follows the deck's slide numbers and wording. When the deck changes, the brief changes with it.
 
-## File
+## Where the brief lives
 
-- Name: `<deck-slug>.brief.md`, beside the deck, with the same sharing.
-- Encoding: UTF-8 Markdown, with YAML front matter.
-- Where the deck lives in a tool that can't hold a Markdown file (for example Google Drive), a plain-text document holding the raw Markdown is fine. Keep the URL stable and update it in place.
+**Inside the deck, as its last slides.** One or more appendix slides at the end, each titled `Appendix · Deck brief (n of m)`, set to skip when presenting, holding the brief as raw Markdown in a monospace font at a readable size (about 8 to 9 pt, two columns).
+
+Why there:
+
+- **It travels with the deck.** Same file, same sharing, same version history. Nothing to keep in step but the slides themselves.
+- **Every reader can see it.** AI connectors that read a deck read slide text, including skipped slides. Tested with the Google Drive connector on Google Slides, November 2026.
+- **It stays out of the room.** Skipped slides don't appear when presenting.
+
+Why not elsewhere:
+
+- **Speaker notes alone don't work.** The Google Drive connector, the most common way an assistant opens a Google Slides deck, returns slide text but not speaker notes. A brief kept only in the notes is invisible to it.
+- **A separate file drifts.** Its sharing, link and version separate from the deck's, and someone has to remember to keep both current.
+- **Hidden text is out.** Overflowing text boxes, white-on-white or tiny type would make the brief invisible to people while visible to machines, which is exactly the pattern assistants are right to distrust. The appendix must be legible to a person who scrolls to the end.
+
+Fallbacks:
+
+- Where a deck format has no way to skip slides, put the appendix after a clear "Appendix" divider.
+- Where the brief must stand alone (a PDF export may drop skipped slides; check your tool), also save it as `<deck-slug>.brief.md`.
+- Encoding: UTF-8 Markdown with YAML front matter. In the front matter, `deck:` says `this presentation` when the brief is inside it, or gives the deck's URL when it stands alone.
 
 ## Front matter
 
@@ -25,7 +41,7 @@ Think of it as a source map for a presentation: the deck is the compiled output,
 deck_brief: 0.1              # spec version
 title: "Quarterly operations review"
 organisation: Example Ltd
-deck: https://example.com/deck            # link to the deck itself
+deck: this presentation                    # or the deck's URL if the brief stands alone
 deck_version: v3, 24 slides
 as_of: 2026-11-12                          # date the brief was last checked against the deck
 author: A. Person, Head of Operations
@@ -75,15 +91,9 @@ Rules for slide sections:
 - Only the fields that apply. **Says** is required for any slide that makes a claim.
 - Keep each field short. The brief explains the slide; it isn't a second report.
 
-## Finding the brief from the deck
+## Finding the brief in a deck
 
-Put this as the first line of the first slide's speaker notes:
-
-```
-deck-brief: <url of the brief>
-```
-
-Optionally start each slide's notes with `brief: #slide-<n>`. Tools and assistants that read a deck look for the `deck-brief:` line, the way browsers look for `sourceMappingURL`.
+Look at the end of the deck for slides titled `Appendix · Deck brief`. The first of them starts with the YAML front matter (`deck_brief: 0.1`), the way a source map starts with its version. If the brief stands alone, link it from the deck's last visible slide.
 
 ## Reading a brief
 

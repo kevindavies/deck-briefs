@@ -14,11 +14,7 @@ It's a source map for a presentation: the deck is the compiled output, and the b
 
 ## The convention in one line
 
-First line of the deck's first-slide speaker notes:
-
-```
-deck-brief: <url of the brief>
-```
+The brief is the deck's last slides: `Appendix · Deck brief`, skipped when presenting, the Markdown set in a readable monospace font. It travels with the deck, AI connectors read it (they read slide text, not speaker notes), and nobody sees it in the room.
 
 ## Data, not instructions
 

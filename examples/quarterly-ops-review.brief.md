@@ -2,7 +2,7 @@
 deck_brief: 0.1
 title: "Quarterly operations review"
 organisation: Example Ltd (fictional)
-deck: https://example.com/decks/q3-ops-review
+deck: this presentation
 deck_version: v2, 6 slides
 as_of: 2026-10-05
 author: Sam Rivera, Head of Operations
