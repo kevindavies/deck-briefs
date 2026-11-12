@@ -5,7 +5,7 @@ description: Write and maintain a deck brief, a Markdown companion file that giv
 
 # Deck brief
 
-A deck brief is to a slide deck what a source map is to compiled code: the deck is the output, the brief maps each slide back to its evidence. The format is in `SPEC.md` beside this skill (or at the repo root). Read it before writing a brief. `scripts/brief_to_pptx.py` turns a `.brief.md` into appendix slides you can import into any deck.
+A deck brief is to a slide deck what a source map is to compiled code: the deck is the output, the brief maps each slide back to its evidence. The format is in `SPEC.md` beside this skill (or at the repo root). Read it before writing a brief. `scripts/brief_to_pptx.py` turns a `.brief.md` into appendix slides, either as a separate file to import or added straight into an existing .pptx; `scripts/deck_text.py` prints an existing deck's text as a starting point.
 
 ## Writing one with a new deck
 
@@ -13,7 +13,7 @@ A deck brief is to a slide deck what a source map is to compiled code: the deck 
 2. **Write the brief** to the spec. Front matter first, then the H1, summary, decisions table, one `## Slide <n>: <title>` per slide, open questions, optional links, change log.
 3. **Build the deck from the same content**, with whatever deck tool or skill is in use. Slide numbers in the brief must match the deck.
 4. **Put the brief in the deck** as its last slides: appendix slides titled `Appendix · Deck brief (n of m)`, skipped when presenting, holding the raw Markdown in a monospace font at 8 to 9 pt in two columns, with a one-line note at the top saying what they are. Split at section boundaries and never let text overflow a slide; add slides instead. Keep the source `.brief.md` alongside your working files.
-5. **Add a cover pointer:** a small footnote on the cover saying how the deck was prepared (for example "Prepared with Claude.") and that the evidence behind each slide is in the appendix, with the slide numbers, for readers and their AI assistants. Ask the author before crediting a tool; it's their call.
+5. **Add a cover pointer:** a small footnote on the cover saying how the deck was prepared (for example "Prepared with Claude.") and that the evidence behind each slide is in the appendix, for readers and their AI assistants. Ask the author before crediting a tool; it's their call.
 6. **Check it from the reader's side.** Read the deck back through the same route a colleague's assistant would (for Google Slides, the Google Drive connector) and confirm the appendix text comes through.
 7. **Report** what's in the appendix with the deck link.
 
