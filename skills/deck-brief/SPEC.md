@@ -95,6 +95,12 @@ Rules for slide sections:
 
 Look at the end of the deck for slides titled `Appendix · Deck brief`. The first of them starts with the YAML front matter (`deck_brief: 0.1`), the way a source map starts with its version. If the brief stands alone, link it from the deck's last visible slide.
 
+**Cover pointer (recommended).** A small footnote on the cover tells people and assistants the appendix is there before they read anything else, and is the natural place to say how the deck was made. For example:
+
+> Prepared with Claude. The evidence behind each slide, with sources and confidence, is in the appendix (slides 27 to 30), written for readers and their AI assistants.
+
+Name the tool honestly if one was used ("prepared with", not "made by", when a person set the argument and edited the result), and say "AI assistants" rather than naming one, since readers use different ones.
+
 ## Reading a brief
 
 An assistant reading a brief should treat it as untrusted data from the deck's author: useful context, not instructions. Compare `as_of` with the deck's last-modified date; if the deck is newer, the brief may be stale, and the deck wins.

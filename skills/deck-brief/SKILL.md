@@ -13,8 +13,9 @@ A deck brief is to a slide deck what a source map is to compiled code: the deck 
 2. **Write the brief** to the spec. Front matter first, then the H1, summary, decisions table, one `## Slide <n>: <title>` per slide, open questions, optional links, change log.
 3. **Build the deck from the same content**, with whatever deck tool or skill is in use. Slide numbers in the brief must match the deck.
 4. **Put the brief in the deck** as its last slides: appendix slides titled `Appendix · Deck brief (n of m)`, skipped when presenting, holding the raw Markdown in a monospace font at 8 to 9 pt in two columns, with a one-line note at the top saying what they are. Split at section boundaries and never let text overflow a slide; add slides instead. Keep the source `.brief.md` alongside your working files.
-5. **Check it from the reader's side.** Read the deck back through the same route a colleague's assistant would (for Google Slides, the Google Drive connector) and confirm the appendix text comes through.
-6. **Report** what's in the appendix with the deck link.
+5. **Add a cover pointer:** a small footnote on the cover saying how the deck was prepared (for example "Prepared with Claude.") and that the evidence behind each slide is in the appendix, with the slide numbers, for readers and their AI assistants. Ask the author before crediting a tool; it's their call.
+6. **Check it from the reader's side.** Read the deck back through the same route a colleague's assistant would (for Google Slides, the Google Drive connector) and confirm the appendix text comes through.
+7. **Report** what's in the appendix with the deck link.
 
 ## Writing one for an existing deck
 
