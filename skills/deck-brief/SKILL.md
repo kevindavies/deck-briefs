@@ -17,9 +17,18 @@ A deck brief is to a slide deck what a source map is to compiled code: the deck 
 6. **Check it from the reader's side.** Read the deck back through the same route a colleague's assistant would (for Google Slides, the Google Drive connector) and confirm the appendix text comes through.
 7. **Report** what's in the appendix with the deck link.
 
-## Writing one for an existing deck
+## Adding one to an existing deck
 
-Read the deck's current text first (export it, or read it through a connector). The brief describes the deck as it is now, including edits other people made, not the version you remember building. Where the deck's wording has changed (a status, an owner marked with a question mark), the brief reflects it and, where useful, says what the change means.
+Any deck can have a brief, including one made by hand or by someone else.
+
+1. **Read the deck as it is now.** For Google Slides, read it through the Google Drive connector, or download it as .pptx. For a .pptx, run `scripts/deck_text.py deck.pptx`, which prints each slide's text and notes, marks skipped slides, and skips an existing appendix. Include edits other people made, not the version you remember.
+2. **Find the evidence, don't invent it.** The slides rarely show where a number came from. Look for the sources (the spreadsheet, the report, the ticket), ask the author for the rest, and where neither works write "Evidence: not stated in the deck" with a confidence that says so. A brief that admits a gap is worth more than one that papers over it.
+3. **Ask the author for the decisions and any position the deck argues,** then write the strongest opposing view fairly.
+4. **Write the brief** to the spec, numbering slides as the deck's footers do. Describe skipped or alternative slides as such.
+5. **Add it to the deck:**
+   - **PowerPoint:** `scripts/brief_to_pptx.py deck.brief.md --into deck.pptx` appends the appendix slides, skipped, at the deck's own size. Re-running replaces the previous appendix.
+   - **Google Slides or Keynote:** `scripts/brief_to_pptx.py deck.brief.md --out appendix.pptx`, upload it, then in the deck select the last slide and use File > Import slides > select all. To update, delete the old appendix slides first.
+6. **Cover pointer, check and report** as in steps 5 to 7 above. Prefer "the appendix at the end of the deck" over slide numbers, which go stale when slides move.
 
 ## Keeping it in sync
 
