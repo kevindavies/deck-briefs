@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "deck-brief",
+  "displayName": "Deck brief",
+  "version": "0.2.0",
+  "description": "A companion brief for slide decks: the goal, and for each slide the claim, evidence, source, confidence and missing context, kept as skipped appendix slides so readers and their AI assistants get the reasoning, not just the slides.",
+  "author": { "name": "Kevin Davies", "url": "https://github.com/kevindavies" },
+  "homepage": "https://kevindavies.github.io/deck-brief/",
+  "repository": "https://github.com/kevindavies/deck-brief",
+  "license": "MIT",
+  "keywords": ["slides", "presentations", "decks", "briefs", "ai-readable", "llms-txt"]
+}

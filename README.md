@@ -21,10 +21,19 @@ The brief is the deck's last slides: `Appendix · Deck brief`, skipped when pres
 
 A brief describes; it never directs. It has no lines addressed to the reader's assistant, no hidden text and no claims of authority. A file that tries to steer someone else's AI is prompt injection, and good assistants treat it that way. A brief that states facts, sources them, labels opinions and gives the other side fairly is one a sceptical reader's assistant can rely on.
 
-## Installing the skill
+## Installing
 
-Copy `skills/deck-brief/` (with `SPEC.md`) into your Claude Code skills folder, for example `~/.claude/skills/deck-brief/`.
+As a Claude Code plugin:
+
+```
+claude plugin marketplace add kevindavies/deck-brief
+claude plugin install deck-brief@deck-brief
+```
+
+Or copy `skills/deck-brief/` (it carries its own `SPEC.md`) into your skills folder, for example `~/.claude/skills/deck-brief/`.
+
+The scripts need Python 3 and `python-pptx` (for example `uv run --with python-pptx python skills/deck-brief/scripts/brief_to_pptx.py …`).
 
 ## Status
 
-Version 0.1, November 2026. Feedback welcome.
+Format version 0.2, November 2026. Feedback welcome. MIT licence.

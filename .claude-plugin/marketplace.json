@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "deck-brief",
+  "description": "Deck brief: AI-readable companion briefs for slide decks.",
+  "owner": { "name": "Kevin Davies", "url": "https://github.com/kevindavies" },
+  "plugins": [
+    {
+      "name": "deck-brief",
+      "source": "./",
+      "version": "0.2.0",
+      "description": "Write and maintain a deck brief for any slide deck, and score the deck against its goal.",
+      "category": "productivity",
+      "keywords": ["slides", "presentations", "decks"]
+    }
+  ]
+}
