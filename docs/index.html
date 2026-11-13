@@ -9,6 +9,7 @@
 <meta property="og:title" content="deck-brief">
 <meta property="og:description" content="A source map for your slides. The reasoning behind every slide, at the end of the deck, for readers and their AI assistants.">
 <title>deck-brief</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A9%B2%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,500;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Courier+Prime:wght@400;700&family=Caveat:wght@500;700&display=swap">
@@ -369,17 +370,22 @@ footer { border-top: 1px solid var(--rule); padding-top: calc(var(--line) - 1px)
   .pair .row { grid-template-columns: minmax(0, 1fr); row-gap: 0.2rem; }
   .excerpt { font-size: 0.8rem; }
 }
+
+  .lede-block { position: relative; }
+  .briefs { position: absolute; right: 0; top: -0.15em; font-size: clamp(110px, 17vw, 250px); line-height: 1; transform: rotate(-8deg); filter: drop-shadow(0 10px 18px rgba(21,25,29,.18)); pointer-events: none; user-select: none; }
+  @media (max-width: 760px) { .briefs { position: static; display: block; font-size: 96px; margin: 0 0 8px; transform: rotate(-8deg); } }
 </style>
 </head>
 <body>
 
 <main class="wrap">
   <header class="site-head">
-    <div class="label"><h1>deck-brief</h1><span>Claude skill and open format</span><span>MIT licence</span><span><a class="repo-link" href="https://github.com/kevindavies/deck-brief">GitHub<b aria-hidden="true">&#8599;</b></a></span></div>
+    <div class="label"><h1><span aria-hidden="true">🩲</span> deck-brief</h1><span>Claude skill and open format</span><span>MIT licence</span><span><a class="repo-link" href="https://github.com/kevindavies/deck-brief">GitHub<b aria-hidden="true">&#8599;</b></a></span></div>
     <nav class="site-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#install">Install</a></nav>
   </header>
 
   <div class="lede-block grid12">
+    <span class="briefs" role="img" aria-label="Briefs">🩲</span>
     <p class="lede">A <em>source map</em> for your slides.</p>
     <p class="lede-sub">A deck brief is a few extra slides at the end of a deck, skipped when you present. They hold the reasoning behind every slide: the claim, the evidence, how sure you are and what the slide leaves out. People who skim, and the AI assistants they ask, read the working instead of guessing at it.</p>
     <p class="lede-aside">The deck is the compiled output. The brief maps each slide back to its source, so nobody has to <q>infer the pig from the sausage</q>.</p>
