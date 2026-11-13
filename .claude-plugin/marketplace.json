@@ -5,7 +5,7 @@
   "owner": { "name": "Kevin Davies", "url": "https://github.com/kevindavies" },
   "plugins": [
     {
-      "name": "deck-briefs",
+      "name": "deck-brief",
       "source": "./",
       "version": "0.2.0",
       "description": "Write and maintain a deck brief for any slide deck, and score the deck against its goal.",

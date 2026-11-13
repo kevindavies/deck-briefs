@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "deck-briefs",
+  "name": "deck-brief",
   "displayName": "Deck Briefs",
   "version": "0.2.0",
   "description": "A companion brief for slide decks: the goal, and for each slide the claim, evidence, source, confidence and missing context, kept as skipped appendix slides so readers and their AI assistants get the reasoning, not just the slides.",

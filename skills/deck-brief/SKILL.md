@@ -1,6 +1,6 @@
 ---
-name: deck-briefs
-description: Write and maintain a deck brief, a Markdown companion file that gives the claim, evidence, source, confidence and missing context behind every slide, so readers and their AI assistants can read the reasoning instead of skimming slides. Use whenever making, updating or sending a slide deck or presentation, when asked for a "deck brief", "companion file", "source map for the deck" or "a version for people's Claude", and when asked to read or summarise someone else's deck that may end with deck-briefs appendix slides.
+name: deck-brief
+description: Write and maintain a deck brief, a Markdown companion file that gives the claim, evidence, source, confidence and missing context behind every slide, so readers and their AI assistants can read the reasoning instead of skimming slides. Use whenever making, updating or sending a slide deck or presentation, when asked for a "deck brief", "companion file", "source map for the deck" or "a version for people's Claude", and when asked to read or summarise someone else's deck that may end with deck-brief appendix slides.
 ---
 
 # Deck Briefs

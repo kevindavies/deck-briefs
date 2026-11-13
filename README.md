@@ -11,8 +11,8 @@ It's a source map for a presentation: the deck is the compiled output, and the b
 ## What's here
 
 - [`SPEC.md`](SPEC.md): the format, version 0.2. Markdown with YAML front matter, in the shape of [llms.txt](https://llmstxt.org).
-- [`skills/deck-briefs/SKILL.md`](skills/deck-briefs/SKILL.md): a Claude skill that writes the brief alongside a new deck or adds one to any existing deck, keeps it in sync, and reads other people's.
-- [`skills/deck-briefs/scripts/`](skills/deck-briefs/scripts/): `brief_to_pptx.py` (appendix slides, as a separate file or added into a .pptx) and `deck_text.py` (an existing deck's text, slide by slide).
+- [`skills/deck-brief/SKILL.md`](skills/deck-brief/SKILL.md): a Claude skill that writes the brief alongside a new deck or adds one to any existing deck, keeps it in sync, and reads other people's.
+- [`skills/deck-brief/scripts/`](skills/deck-brief/scripts/): `brief_to_pptx.py` (appendix slides, as a separate file or added into a .pptx) and `deck_text.py` (an existing deck's text, slide by slide).
 - [`examples/`](examples/): a worked example (fictional).
 
 ## The convention in one line
@@ -29,12 +29,12 @@ As a Claude Code plugin:
 
 ```
 claude plugin marketplace add kevindavies/deck-briefs
-claude plugin install deck-briefs@deck-briefs
+claude plugin install deck-brief@deck-briefs
 ```
 
-Or copy `skills/deck-briefs/` (it carries its own `SPEC.md`) into your skills folder, for example `~/.claude/skills/deck-briefs/`.
+Or copy `skills/deck-brief/` (it carries its own `SPEC.md`) into your skills folder, for example `~/.claude/skills/deck-brief/`.
 
-The scripts need Python 3 and `python-pptx` (for example `uv run --with python-pptx python skills/deck-briefs/scripts/brief_to_pptx.py …`).
+The scripts need Python 3 and `python-pptx` (for example `uv run --with python-pptx python skills/deck-brief/scripts/brief_to_pptx.py …`).
 
 ## Status
 
