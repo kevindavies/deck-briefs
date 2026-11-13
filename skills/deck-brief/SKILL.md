@@ -1,6 +1,6 @@
 ---
 name: deck-brief
-description: Write and maintain a deck brief, a Markdown companion file that gives the claim, evidence, source, confidence and missing context behind every slide, so readers and their AI assistants can read the reasoning instead of skimming slides. Use whenever making, updating or sending a slide deck or presentation, when asked for a "deck brief", "companion file", "source map for the deck" or "a version for people's Claude", and when asked to read or summarise someone else's deck that may end with deck-brief appendix slides.
+description: Write and maintain a deck brief, a Markdown companion file that gives the claim, evidence, source, confidence and missing context behind every slide, so readers and their AI assistants can read the reasoning instead of skimming slides. Use whenever making, updating or sending a slide deck or presentation, when slides were edited by hand and the brief needs a refresh, when asked for a "deck brief", "companion file", "source map for the deck" or "a version for people's Claude", and when asked to read or summarise someone else's deck that may end with deck-brief appendix slides.
 ---
 
 # Deck Briefs
@@ -40,6 +40,17 @@ Once the brief has a goal and Job lines, the deck can be scored against them. Do
 Every time the deck changes, update the brief in the same session: the affected slide sections, renumbering if slides moved, `as_of`, `deck_version` and a change-log line. Then replace the appendix slides with freshly generated ones. If you can't update it, say so plainly; a stale brief is worse than none.
 
 Don't keep the brief only in speaker notes: the Google Drive connector doesn't return notes, so most readers' assistants would never see it.
+
+## Refreshing after hand edits
+
+People edit slides by hand, often in another tool, and the brief falls behind. When asked to "refresh the brief", or when a deck you're reading is newer than its brief's `as_of`, bring the brief up to date without rewriting it.
+
+1. **Start from the current brief.** Use the `.brief.md` file if you have it. If not, rebuild it from the deck's own appendix slides, which hold the full Markdown.
+2. **Read the deck as it is now**, as in "Adding one to an existing deck", step 1. Ignore the appendix slides.
+3. **Compare the brief with the deck, slide by slide.** Look for slides that were added, removed, moved or retitled, and for claims, numbers or asks whose wording changed. Match slides by content, not number, because numbers shift when slides move.
+4. **Change only what moved.** Keep the evidence, confidence and views on slides that didn't change. Rewrite the sections for slides that did, and renumber to match the footers. If a change affects the goal, the decisions table or Before and After the meeting, update those too.
+5. **Don't invent sources for new claims.** A number added by hand has no known source. Write "Evidence: not stated in the deck", set confidence to match, and ask the author where it came from.
+6. **Close it out.** Update `as_of`, `deck_version` and add a change-log line saying what moved. Then replace the appendix slides as in "Keeping it in sync", and tell the author what changed in the brief and which new claims still need a source.
 
 ## Rules that make it safe to share
 

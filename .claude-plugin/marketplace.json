@@ -7,7 +7,7 @@
     {
       "name": "deck-brief",
       "source": "./",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "description": "Write and maintain a deck brief for any slide deck, and score the deck against its goal.",
       "category": "productivity",
       "keywords": ["slides", "presentations", "decks"]
