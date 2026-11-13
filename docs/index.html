@@ -6,9 +6,9 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Deck brief: a few skipped slides at the end of a deck that hold the reasoning behind every slide, for people who skim and the AI assistants they ask. A Claude skill and an open format.">
-<meta property="og:title" content="deck-brief">
+<meta property="og:title" content="Deck Briefs">
 <meta property="og:description" content="A source map for your slides. The reasoning behind every slide, at the end of the deck, for readers and their AI assistants.">
-<title>deck-brief</title>
+<title>Deck Briefs</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A9%B2%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,6 +113,7 @@ code { font-family: var(--font-type); font-size: 0.92em; }
   text-wrap: balance; margin: 0;
 }
 .lede em { font-style: italic; font-weight: 300; }
+.lede-subtitle { grid-column: 1 / span 8; margin: -0.35em 0 0.6em; font-family: var(--font-display); font-weight: 350; font-size: clamp(1.45rem, 2.6vw, 2.2rem); line-height: 1.15; opacity: .72; text-wrap: balance; }
 .lede-sub { grid-column: 1 / span 8; margin: 0; font-size: 1.25rem; line-height: var(--line); text-wrap: pretty; }
 .lede-aside { grid-column: 1 / span 7; margin: 0; color: var(--muted); text-wrap: pretty; }
 .lede-aside q { font-style: italic; }
@@ -335,6 +336,7 @@ footer { border-top: 1px solid var(--rule); padding-top: calc(var(--line) - 1px)
   .wrap { gap: calc(var(--line) * 2); }
   .lede, .lede-sub, .lede-aside, .sec-label, .sec-body { grid-column: 1 / -1; }
   .lede-sub { font-size: 1.125rem; }
+  .lede-subtitle { grid-column: 1 / -1; }
   .sec { row-gap: var(--line); }
   .standfirst, .band-text, .closer { font-size: 1.375rem; line-height: 2rem; }
   .rules li { padding-left: 2rem; }
@@ -380,13 +382,14 @@ footer { border-top: 1px solid var(--rule); padding-top: calc(var(--line) - 1px)
 
 <main class="wrap">
   <header class="site-head">
-    <div class="label"><h1><span aria-hidden="true">🩲</span> deck-brief</h1><span>Claude skill and open format</span><span>MIT licence</span><span><a class="repo-link" href="https://github.com/kevindavies/deck-brief">GitHub<b aria-hidden="true">&#8599;</b></a></span></div>
+    <div class="label"><h1><span aria-hidden="true">🩲</span> Deck Briefs</h1><span>Claude skill and open format</span><span>MIT licence</span><span><a class="repo-link" href="https://github.com/kevindavies/deck-briefs">GitHub<b aria-hidden="true">&#8599;</b></a></span></div>
     <nav class="site-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#install">Install</a></nav>
   </header>
 
   <div class="lede-block grid12">
     <span class="briefs" role="img" aria-label="Briefs">🩲</span>
-    <p class="lede">A <em>source map</em> for your slides.</p>
+    <p class="lede">Deck Briefs</p>
+    <p class="lede-subtitle">A sort of AI&#8209;friendly <em>source map</em> for your slides.</p>
     <p class="lede-sub">A deck brief is a few extra slides at the end of a deck, skipped when you present. They hold the reasoning behind every slide: the claim, the evidence, how sure you are and what the slide leaves out. People who skim, and the AI assistants they ask, read the working instead of guessing at it.</p>
     <p class="lede-aside">The deck is the compiled output. The brief maps each slide back to its source, so nobody has to <q>infer the pig from the sausage</q>.</p>
     <p class="lede-links"><a href="#how">See how it works</a><span aria-hidden="true">&bull;</span><a href="#whats-in">What’s in a brief</a><span aria-hidden="true">&bull;</span><a href="#install">Install the skill</a></p>
@@ -547,7 +550,7 @@ After this deck, the leadership team will see that faster support came from the 
 
 <span class="li">- <span class="f">**View (author's):**</span> move before the renewal date.</span><span class="li">- <span class="f">**Other view, stated fairly:**</span> migrating mid-year risks a dip in response times, and the saving is small against the effort; renewing for one more year would allow a calmer move.</span></pre>
       </div>
-      <p class="sidenote">The whole fictional example is in the repo: <a href="https://github.com/kevindavies/deck-brief/blob/main/examples/quarterly-ops-review.brief.md">examples/quarterly-ops-review.brief.md</a>.</p>
+      <p class="sidenote">The whole fictional example is in the repo: <a href="https://github.com/kevindavies/deck-briefs/blob/main/examples/quarterly-ops-review.brief.md">examples/quarterly-ops-review.brief.md</a>.</p>
     </div>
   </section>
 
@@ -605,9 +608,9 @@ After this deck, the leadership team will see that faster support came from the 
     </div>
     <div class="sec-body">
       <div class="install-block"><p class="code-label">As a plugin</p>
-      <div class="code"><pre class="cmds"><code><span class="cmd">claude plugin marketplace add kevindavies/deck-brief</span><span class="cmd">claude plugin install <span style="white-space:nowrap">deck-brief@deck-brief</span></span></code></pre><button type="button" class="copy" hidden>Copy</button></div></div>
+      <div class="code"><pre class="cmds"><code><span class="cmd">claude plugin marketplace add kevindavies/deck-briefs</span><span class="cmd">claude plugin install <span style="white-space:nowrap">deck-briefs@deck-briefs</span></span></code></pre><button type="button" class="copy" hidden>Copy</button></div></div>
       <div class="install-block"><p class="code-label">Or by hand</p>
-      <div class="code"><pre class="cmds"><code><span class="cmd">git clone https://github.com/kevindavies/deck-brief.git</span><span class="cmd">cp -r deck-brief/skills/deck-brief ~/.claude/skills/</span></code></pre><button type="button" class="copy" hidden>Copy</button></div></div>
+      <div class="code"><pre class="cmds"><code><span class="cmd">git clone https://github.com/kevindavies/deck-briefs.git</span><span class="cmd">cp -r deck-briefs/skills/deck-briefs ~/.claude/skills/</span></code></pre><button type="button" class="copy" hidden>Copy</button></div></div>
       <p>Then ask for it in your own words:</p>
       <ul class="asks">
         <li>“Add a deck brief to this deck.”</li>
@@ -615,7 +618,7 @@ After this deck, the leadership team will see that faster support came from the 
         <li>“Score this deck against its goal.”</li>
         <li>“What’s behind slide 4?”</li>
       </ul>
-      <p class="links"><a class="btn" href="https://github.com/kevindavies/deck-brief">The repo on GitHub</a><a href="https://github.com/kevindavies/deck-brief/blob/main/SPEC.md">Read the format (SPEC.md)</a></p>
+      <p class="links"><a class="btn" href="https://github.com/kevindavies/deck-briefs">The repo on GitHub</a><a href="https://github.com/kevindavies/deck-briefs/blob/main/SPEC.md">Read the format (SPEC.md)</a></p>
     </div>
   </section>
 

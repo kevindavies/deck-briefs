@@ -1,9 +1,9 @@
 ---
-name: deck-brief
-description: Write and maintain a deck brief, a Markdown companion file that gives the claim, evidence, source, confidence and missing context behind every slide, so readers and their AI assistants can read the reasoning instead of skimming slides. Use whenever making, updating or sending a slide deck or presentation, when asked for a "deck brief", "companion file", "source map for the deck" or "a version for people's Claude", and when asked to read or summarise someone else's deck that may end with deck-brief appendix slides.
+name: deck-briefs
+description: Write and maintain a deck brief, a Markdown companion file that gives the claim, evidence, source, confidence and missing context behind every slide, so readers and their AI assistants can read the reasoning instead of skimming slides. Use whenever making, updating or sending a slide deck or presentation, when asked for a "deck brief", "companion file", "source map for the deck" or "a version for people's Claude", and when asked to read or summarise someone else's deck that may end with deck-briefs appendix slides.
 ---
 
-# Deck brief
+# Deck Briefs
 
 A deck brief is to a slide deck what a source map is to compiled code: the deck is the output, the brief maps each slide back to its evidence. The format is in `SPEC.md` beside this skill (or at the repo root). Read it before writing a brief. `scripts/brief_to_pptx.py` turns a `.brief.md` into appendix slides, either as a separate file to import or added straight into an existing .pptx; `scripts/deck_text.py` prints an existing deck's text as a starting point.
 
