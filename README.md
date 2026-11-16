@@ -23,6 +23,26 @@ The brief is the deck's last slides: `Appendix · Deck brief`, skipped when pres
 
 A brief describes; it never directs. It has no lines addressed to the reader's assistant, no hidden text and no claims of authority. A file that tries to steer someone else's AI is prompt injection, and good assistants treat it that way. A brief that states facts, sources them, labels opinions and gives the other side fairly is one a sceptical reader's assistant can rely on.
 
+## Reading a deck that has a brief
+
+When you share a deck, give people a prompt they can paste into their own assistant. This one was tested on a real 30-slide deck: an assistant with nothing but the link read it through the Google Drive connector and came back with every decision, owner and date, fair challenges, and a few inconsistencies worth fixing before the meeting.
+
+```
+Read this deck, including the appendix slides at the end: <link>
+
+Then tell me, in under 400 words:
+1. The three things I most need to know.
+2. The decisions I'm being asked to make, who each is for, and by when.
+3. What I should challenge or ask about, with your reasons.
+4. How confident the deck is in its main numbers, and where it says it's weakest.
+
+Only use what's in the deck. Say if something looks out of date or inconsistent.
+```
+
+The prompt is the reader's own instruction to their own assistant, so it sits on the right side of "data, not instructions". "Including the appendix slides" makes sure the brief gets read. "Only use what's in the deck" stops the gaps being filled with guesses. The last line gives you a free check that the brief and the slides still agree.
+
+In a share message, one line does most of the work: *Ask your assistant: "Read this deck, including the appendix at the end. What do I need to know, what am I being asked to decide, and what should I challenge?"*
+
 ## Installing
 
 As a Claude Code plugin:
