@@ -176,14 +176,14 @@ code { font-family: var(--font-type); font-size: 0.92em; }
 .num svg { flex: none; }
 .num .skip { color: var(--link); font-weight: 700; }
 
-/* The source-map bracket: from slide 4 to the appendix */
-.br { grid-row: 3; height: 1.6rem; position: relative; }
-.br i { position: absolute; top: 0.55rem; bottom: 0; border: 0 dashed var(--link); }
-.b4 { grid-column: 4; } .b4 i { left: 50%; right: 0; border-left-width: 2px; border-bottom-width: 2px; border-bottom-left-radius: 10px; }
-.b5 { grid-column: 5; } .b5 i { left: 0; right: 0; border-bottom-width: 2px; }
-.b6 { grid-column: 6; } .b6 i { left: 0; right: 0; border-bottom-width: 2px; }
-.b7 { grid-column: 7; } .b7 i { left: 0; right: 50%; border-right-width: 2px; border-bottom-width: 2px; border-bottom-right-radius: 10px; }
-.bnote { grid-row: 4; grid-column: 4 / 8; text-align: center; font-family: var(--font-hand); font-weight: 600; font-size: 1.5rem; line-height: 1.75rem; color: var(--link); padding-top: 0.35rem; transform: rotate(-1deg); }
+/* The source-map bracket: hugs the skipped appendix, edge to dashed edge */
+.br { grid-row: 3; grid-column: 6 / 8; height: 1.6rem; position: relative; }
+.br i {
+  position: absolute; top: 0.55rem; bottom: 0; left: calc(0.45rem - 5.5px); right: calc(0.45rem - 5.5px);
+  border: 2px dashed var(--link); border-top: 0; border-radius: 0 0 10px 10px;
+}
+.bnote { grid-row: 4; grid-column: 6 / 8; text-align: center; font-family: var(--font-hand); font-weight: 600; font-size: 1.5rem; line-height: 1.75rem; color: var(--link); padding-top: 0.35rem; transform: rotate(-1deg); }
+.bnote span { display: inline-block; }
 .deck-fig figcaption { margin-top: var(--line); font-size: 0.875rem; line-height: 1.25rem; color: var(--muted); max-width: 40rem; text-wrap: pretty; }
 
 /* Sections */
@@ -327,8 +327,7 @@ footer { border-top: 1px solid var(--rule); padding-top: calc(var(--line) - 1px)
 .motion .s1 { animation-delay: 0.1s; } .motion .s2 { animation-delay: 0.2s; } .motion .s3 { animation-delay: 0.3s; } .motion .s4 { animation-delay: 0.4s; }
 .motion .s5 { animation-delay: 0.8s; } .motion .s6 { animation-delay: 0.9s; }
 .motion .hand { animation: write 0.9s steps(24, end) 1.3s both; }
-.motion .br i { animation: grow 0.25s linear both; }
-.motion .b4 i { animation-delay: 2.2s; } .motion .b5 i { animation-delay: 2.45s; } .motion .b6 i { animation-delay: 2.7s; } .motion .b7 i { animation-delay: 2.95s; }
+.motion .br i { animation: grow 0.8s linear 2.2s both; }
 .motion .bnote { animation: write 1s steps(30, end) 3.25s both; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
@@ -469,8 +468,8 @@ home: in-deck
         <div class="num"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A10 10 0 0 1 12 5c5 0 9 4.5 10 7a12 12 0 0 1-2.6 3.6M6.6 6.6A12 12 0 0 0 2 12c1 2.5 5 7 10 7a10 10 0 0 0 4.4-1"/></svg>6<span class="lbl skip">&nbsp;Skipped</span></div>
       </div>
 
-      <div class="br b4"><i></i></div><div class="br b5"><i></i></div><div class="br b6"><i></i></div><div class="br b7"><i></i></div>
-      <div class="bnote">What’s behind slide 4? It’s all in here.</div>
+      <div class="br"><i></i></div>
+      <div class="bnote"><span>What’s behind slide 4?</span> <span>It’s all in here.</span></div>
     </div>
     <figcaption id="deck-cap">A six-slide deck for a fictional company. Slides 1 to 4 are presented. Slides 5 and 6 are the deck brief: skipped when presenting, set in a readable monospace font, and mapping each slide back to its evidence.</figcaption>
   </figure>
